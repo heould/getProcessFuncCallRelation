@@ -51,7 +51,7 @@
 /*----------------------------------------------*
  * 常量定义                                     *
  *----------------------------------------------*/
-const unsigned long MAX_LINES = 5;
+const unsigned long MAX_LINES = 9000;
 
 /*----------------------------------------------*
  * 宏定义                                       *
@@ -123,7 +123,7 @@ CallStack::CallStack(string outFileName):_outFileName(outFileName)
 CallStack::~CallStack()
 {
     clearStack();
-
+    
     _outFile.close();
     _outTestFile.close();
 

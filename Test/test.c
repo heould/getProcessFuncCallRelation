@@ -17,6 +17,7 @@ int main()
 	c();
 	b();
 	a();
+	break;
 	}
 	return 0;
 }

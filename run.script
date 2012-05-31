@@ -8,13 +8,12 @@ LOG="/home/e/getProcessFuncCallRelation/Log/axiba.log"
 MY_SO="/home/e/getProcessFuncCallRelation/Obj/Main.so"
 PROCESS_DIR="/home/e/getProcessFuncCallRelation/Test"
 PROCESS=${PROCESS_DIR}"/test.o"
-PROCESS_="/usr/bin/firefox"
 
+echo ">>remove logs"
+rm -f $LOG"*"
+
+echo ">>make Main.so"
 make
 
-cd $PROCESS_DIR
-make
-
-$PIN -t $MY_SO -- $PROCESS_
-
-indent -linux $LOG
+echo ">>run app"
+$PIN -t $MY_SO -- $PROCESS
